@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.desktopApp</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.base</string>
+		<string>com.apple.dt.unit.osxBase</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>SortOrder</key>
+	<integer>50</integer>
+	<key>Description</key>
+	<string>This template creates desktop application.</string>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>ProductType</key>
+			<string>com.apple.product-type.application</string>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.commandLineToolTarget</string>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>Sources</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>Frameworks</string>
+				</dict>
+				<dict>
+					<key>Class</key>
+					<string>CopyFiles</string>
+					<key>DstPath</key>
+					<string>/usr/share/man/man1/</string>
+					<key>DstSubfolderSpec</key>
+					<string>0</string>
+					<key>RunOnlyForDeploymentPostprocessing</key>
+					<string>YES</string>
+				</dict>
+			</array>
+			<key>SharedSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>___PACKAGENAME___/info.plist</string>
+				<key>OTHER_LDFLAGS</key>
+				<array>
+					<string></string>
+				</array>
+				<key>USER_HEADER_SEARCH_PATHS</key>
+				<string></string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>/Library/Frameworks</string>
+				</array>
+				<key>LIBRARY_SEARCH_PATHS</key>
+				<array>
+					<string>/usr/local/lib</string>
+					<string>/usr/lib</string>
+				</array>
+				<key>HEADER_SEARCH_PATHS</key>
+				<array>
+					<string>/usr/local/include</string>
+					<string>/usr/include</string>
+				</array>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>@executable_path/../Frameworks</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>commandLineType</string>
+			<key>Name</key>
+			<string>Language:</string>
+			<key>Description</key>
+			<string>The primary implementation language for the desktop application</string>
+			<key>Default</key>
+			<string>C++</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Values</key>
+			<array>
+				<string>Swift</string>
+				<string>Objective-C</string>
+				<string>C++</string>
+				<string>C</string>
+			</array>
+			<key>Units</key>
+			<dict>
+				<key>C</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>main.c:comments</string>
+						<string>main.c:include</string>
+						<string>main.c:main:content</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>main.c:include</key>
+						<string>#include&lt;stdio.h&gt;
+</string>
+						<key>main.c:main:content</key>
+						<string>// insert code here...
+printf(&quot;Hello world!\n&quot;);
+</string>
+					</dict>
+				</dict>
+				<key>C++</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>main.cpp:comments</string>
+						<string>main.cpp:include</string>
+						<string>main.cpp:main:content</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>main.cpp:include</key>
+						<string>#include&lt;iostream&gt;
+</string>
+						<key>main.cpp:main:content</key>
+						<string>// insert code here...
+std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::end;
+</string>
+					</dict>
+				</dict>
+				<key>Objective-C</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>main.m:comments</string>
+						<string>main.m:include</string>
+						<string>main.m:main:content</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>main.m:include</key>
+						<string>#import &lt;Foundation/Foundation.h&gt;
+</string>
+						<key>main.m:main:content</key>
+						<string>@autoreleasepool {
+    // insert code here...
+    NSLog(@&quot;Hello, World!&quot;);
+}
+</string>
+					</dict>
+				</dict>
+				<key>Swift</key>
+				<dict>
+					<key>Project</key>
+					<dict>
+						<key>Configurations</key>
+						<dict>
+							<key>Debug</key>
+							<dict>
+								<key>SWIFT_OPTIMIZATION_LEVEL</key>
+								<string>-Onone</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>Targets</key>
+					<array>
+						<dict>
+							<key>SharedSettings</key>
+							<dict>
+								<key>SWIFT_VERSION</key>
+								<string>___DEFAULTTOOLCHAINSWIFTVERSION___</string>
+							</dict>
+						</dict>
+					</array>
+					<key>Nodes</key>
+					<array>
+						<string>main.swift:comments</string>
+						<string>main.swift:include</string>
+						<string>main.swift:main:content</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>main.swift:include</key>
+						<string>import Foundation
+</string>
+						<key>main.swift:main</key>
+						<dict>
+							<key>Beginning</key>
+							<string></string>
+							<key>End</key>
+							<string></string>
+						</dict>
+						<key>main.swift:main:content</key>
+						<string>print(&quot;Hello, World!&quot;)
+</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>info.plist:Content</key>
+		<string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;CFBundleIdentifier&lt;/key&gt;
+    &lt;string&gt;___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.${PRODUCT_NAME:rfc1034identifier}&lt;/string&gt;
+    &lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
+    &lt;string&gt;en&lt;/string&gt;
+    &lt;key&gt;CFBundleExecutable&lt;/key&gt;
+    &lt;string&gt;${EXECUTABLE_NAME}&lt;/string&gt;
+    &lt;key&gt;CFBundleIconFile&lt;/key&gt;
+    &lt;string&gt;&lt;/string&gt;
+    &lt;key&gt;CFBundleInfoDictionaryVersion&lt;/key&gt;
+    &lt;string&gt;6.0&lt;/string&gt;
+    &lt;key&gt;CFBundleName&lt;/key&gt;
+    &lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+    &lt;key&gt;CFBundlePackageType&lt;/key&gt;
+    &lt;string&gt;APPL&lt;/string&gt;
+    &lt;key&gt;CFBundleSignature&lt;/key&gt;
+    &lt;string&gt;????&lt;/string&gt;
+    &lt;key&gt;NSHighResolutionCapable&lt;/key&gt;
+    &lt;true/&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</string>
+		<key>info.plist</key>
+		<dict>
+			<key>TargetIndices</key>
+			<array/>
+			<key>SubstituteMacros</key>
+			<true/>
+		</dict>
+		<key>*:main</key>
+		<dict>
+			<key>Beginning</key>
+			<string>int main(int ac, const char* av[]) {</string>
+			<key>End</key>
+			<string>    return 0;
+}</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>Nodes</key>
+	<array>
+		<string>info.plist:Content</string>
+	</array>
+</dict>
+</plist>
