@@ -132,7 +132,7 @@ printf(&quot;Hello world!\n&quot;);
 </string>
 						<key>main.cpp:main:content</key>
 						<string>// insert code here...
-std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::end;
+std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;
 </string>
 					</dict>
 				</dict>
